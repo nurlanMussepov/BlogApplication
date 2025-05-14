@@ -1,0 +1,33 @@
+<%- include("partials/header") %>
+
+<main class="container mt-5 text-white">
+  <h1 class="mb-4 text-center">Blog Posts</h1>
+
+  <% if (posts.length === 0) { %>
+    <div class="text-center bg-secondary p-4 rounded shadow-sm">
+      <p class="mb-0">No posts yet. <a href="/create" class="text-warning text-decoration-none">Create one</a>.</p>
+    </div>
+  <% } else { %>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <% posts.forEach(post => { %>
+        <div class="col">
+          <div class="card bg-dark border-light text-white h-100 shadow-sm">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title"><%= post.title %></h5>
+              <p class="card-text flex-grow-1"><%= post.content.substring(0, 120) %>...</p>
+              <div class="d-flex flex-wrap gap-2 mt-3">
+                <a href="/view/<%= post.id %>" class="btn btn-outline-light btn-sm">View</a>
+                <a href="/edit/<%= post.id %>" class="btn btn-outline-warning btn-sm">Edit</a>
+                <form action="/delete/<%= post.id %>" method="POST" class="d-inline">
+                  <button type="submit" class="btn btn-outline-danger btn-sm">Delete</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  <% } %>
+</main>
+
+<%- include("partials/footer") %>

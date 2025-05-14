@@ -1,0 +1,61 @@
+.navbar-nav .nav-link, .navbar-brand{
+  font-family: 'Playwrite DK Loopet', sans-serif;
+  font-size: 1.25rem; /* Increase the font size */
+  padding: 0.5rem 1rem; /* Add some padding to make the button and links bigger */
+}
+
+body {
+  background-color: #121212; /* Dark background */
+  color: #ffffff;            /* Light text */
+}
+
+
+.navbar {
+  padding-top: 1rem;  /* Increase top padding */
+  padding-bottom: 1rem;  /* Increase bottom padding */
+  background-color: #007bff; /* Blue */
+
+}
+
+.custom-edit-button{
+  background-color: rgb(244, 230, 75);
+  color: rgb(255, 255, 255);
+  border:0px
+}
+
+.custom-edit-button:hover{
+  background-color: rgb(204, 192, 62);
+  color:rgb(255, 255, 255);
+}
+
+/* Ensure navbar brand stands out slightly more */
+.navbar-brand {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Make sure nav links stand out on hover */
+.navbar-nav .nav-link:hover {
+  color: #e2e2e2;
+}
+
+/* Optional: Rounded corners and subtle shadows for better look */
+.custom-edit-button {
+  border-radius: 0.3rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Improve button focus style for accessibility */
+.custom-edit-button:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.8);
+  outline-offset: 2px;
+}
+
+/* Responsive font adjustment (optional for smaller screens) */
+@media (max-width: 576px) {
+  .navbar-nav .nav-link,
+  .navbar-brand {
+    font-size: 1rem;
+    padding: 0.25rem 0.75rem;
+  }
+}
